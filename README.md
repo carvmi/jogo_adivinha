@@ -19,6 +19,10 @@
 - O método Math.round tem como objetivo arredondar números com casas decimais para o seu valor inteiro mais próximo;
 - Além de dizer que o usuário errou, o jogo diz se o chute dele era maior ou menor do que o número pensado;
 - Dentro do else a condição é disparada apenas quando o "chute" está errado e após isso é preciso fazer outro if;
+- O campo de texto ganha foco em razão do input.focus(), que busca o input do mundo HTML para o JavaScript;
+- A função verifica() recebe o valor digitado pelo usuário no input e o compara com o segredo. Se correto, é exibido o alerta "Você acertou", caso contrário, surge um alerta com a mensagem "Você errou!";
+- A função é executada somente ao clicar no botão, pela variável button, que busca esta funcionalidade do mundo HTML, e é associada ao clique, por meio de onclick;
+
 
 
 
