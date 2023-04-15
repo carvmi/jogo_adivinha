@@ -22,7 +22,7 @@
 - O campo de texto ganha foco em razão do input.focus(), que busca o input do mundo HTML para o JavaScript;
 - A função verifica() recebe o valor digitado pelo usuário no input e o compara com o segredo. Se correto, é exibido o alerta "Você acertou", caso contrário, surge um alerta com a mensagem "Você errou!";
 - A função é executada somente ao clicar no botão, pela variável button, que busca esta funcionalidade do mundo HTML, e é associada ao clique, por meio de onclick;
-
+- O duplo sinal de igual (==) representa igualdade, diferente de quando é utilizado sozinho, que lemos como "recebe";
 
 
 
