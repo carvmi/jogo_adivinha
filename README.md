@@ -31,9 +31,14 @@
 - O alert() indica ao usuário que ele acertou ou errou o número;
 - A variável chamada "achou" recebe false para exibir o alerta "Você ERROU!" somente quando o usuário não conseguir acertar nenhum dos números em nosso array;
 - Quando o número digitado corresponder a um dos elementos do array, declararemos achou = true;
+- Todo array possui a função push que permite adicionar elementos na lista;
 - Para não utilizar o push() uma série de vezes, o processo de sorteio é automatizado. Para isso, cria-se uma função chamada sorteiaNumeros(), que devolve uma lista de segredos e recebe como parâmetro a quantidade de segredos que quer gerar;
-
-
+- A função sorteiaNumeros() deve ser capaz de fornecer uma lista com números aleatórios que não se repetem. Para criá-la, teremos que declarar a function, que receberá como parâmetro "quantidade";
+- numero é uma variável que nos ajudará a contabilizar quantos itens já foram sorteados;
+- O número que passarmos como parâmetro em sorteiaNumeros() é o total de itens aleatórios que não se repetem. Nesse caso, quantidade valerá 5:
+- O último número será incrementado, mas não poderá dar continuidade ao while(), com isso partimos para a execução da última instrução, que é return segredos;
+- O segredos que está na var segredos recebe o valor do segredos que está em return;
+- Usamos o push() somente se o segredo não for encontrado dentre os elementos da lista criada. Sendo assim, declararemos que, se o "achou" for igual a "false", chamamos o segredos.push();
 
 
 
