@@ -23,6 +23,15 @@
 - A função verifica() recebe o valor digitado pelo usuário no input e o compara com o segredo. Se correto, é exibido o alerta "Você acertou", caso contrário, surge um alerta com a mensagem "Você errou!";
 - A função é executada somente ao clicar no botão, pela variável button, que busca esta funcionalidade do mundo HTML, e é associada ao clique, por meio de onclick;
 - O duplo sinal de igual (==) representa igualdade, diferente de quando é utilizado sozinho, que lemos como "recebe";
+- Array é quando os valores de uma variável estão entre colchetes ([]);
+- No JavaScript - e em algumas outras linguagens de programação -, a primeira posição é representada pelo número 0;
+- No for(), declararemos uma variável chamada posicao, que inicialmente recebe o valor 0. A condição para repetição é que a posicao seja menor do que 4 e que, enquanto não atingir este limite, continue a se repetir. Por fim, a variável será incrementada, portanto utilizaremos posicao++;
+- O comando break é usado em laços de repetição while, do/while, for e com os comandos switch/case. Quando usado em laço de repetição, causa uma interrupção imediata do mesmo, continuando a execução do programa na próxima linha após o laço;
+- Para não termos que alterar nosso for() todas as vezes que quisermos adicionar um novo elemento, poderemos utilizar o .length para termos sempre o array atual no for();
+- O alert() indica ao usuário que ele acertou ou errou o número;
+- A variável chamada "achou" recebe false para exibir o alerta "Você ERROU!" somente quando o usuário não conseguir acertar nenhum dos números em nosso array;
+- Quando o número digitado corresponder a um dos elementos do array, declararemos achou = true;
+
 
 
 
