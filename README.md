@@ -31,6 +31,7 @@
 - O alert() indica ao usuário que ele acertou ou errou o número;
 - A variável chamada "achou" recebe false para exibir o alerta "Você ERROU!" somente quando o usuário não conseguir acertar nenhum dos números em nosso array;
 - Quando o número digitado corresponder a um dos elementos do array, declararemos achou = true;
+- Para não utilizar o push() uma série de vezes, o processo de sorteio é automatizado. Para isso, cria-se uma função chamada sorteiaNumeros(), que devolve uma lista de segredos e recebe como parâmetro a quantidade de segredos que quer gerar;
 
 
 
