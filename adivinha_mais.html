@@ -1,8 +1,8 @@
+<!DOCTYPE html>
 <html lang="pt">
   <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo de Adivinhação</title>
     <style>
       body {
@@ -70,89 +70,56 @@
       <h2>Jogo de Adivinhação</h2>
       <p>Eu pensei em um número de 1 a 10. Tente adivinhar!</p>
       <input type="number" id="palpite" min="1" max="10" />
-      <button onclick="enviarPalpite()">Enviar</button>
+      <button onclick="verifica()">Enviar</button>
       <div id="resultado"></div>
       <footer>
         <p>Escola da Nuvem💙 - Milena Carvalho</p>
       </footer>
-
-	    <input/>
-           <button>Compare com o meu segredo</button>
     </div>
+    <script>
+      function sorteia() {
+  return Math.floor(Math.random() * 10) + 1; // de 1 a 10
+}
 
-<script>
+function sorteiaNumeros(quantidade) {
+  var segredos = [];
+  var numero = 1;
 
-	function sorteia() {
+  while (numero <= quantidade) {
+    var numeroAleatorio = sorteia();
 
-		return Math.round(Math.random() * 10);
-	}
+    if (!segredos.includes(numeroAleatorio)) {
+      segredos.push(numeroAleatorio);
+      numero++;
+    }
+  }
 
-	function sorteiaNumeros(quantidade) {
+  return segredos;
+}
 
-		var segredos = [];
+// Sorteando 5 números secretos
+var segredos = sorteiaNumeros(5);
+console.log("Segredos:", segredos); // Para teste no console
 
-		var numero = 1;
+var input = document.querySelector("#palpite");
+input.focus();
 
-		while(numero <= quantidade) {
+function verifica() {
+  var achou = segredos.includes(parseInt(input.value));
 
-			var numeroAleatorio = sorteia();
+  var resultado = document.getElementById("resultado");
 
-			if(numeroAleatorio !== 0 ) {
+  if (achou) {
+    resultado.textContent = "Você ACERTOU!";
+  } else {
+    resultado.textContent = "Você ERROU!";
+  }
 
-				var achou = false;
+  input.value = "";
+  input.focus();
+}
 
-				for(var posicao = 0; posicao < segredos.length; posicao++) {
+    </script>
+  </body>
+</html>
 
-					if(segredos[posicao] == numeroAleatorio) {
-						achou = true;
-						break;
-					}
-				}
-
-				if(achou == false) {
-					segredos.push(numeroAleatorio);	
-					numero++;
-				} 
-			}
-		}
-
-		return segredos;
-	}
-
-	var segredos = sorteiaNumeros(5);
-
-	console.log(segredos);
-
-	var input = document.querySelector("input");
-	input.focus();	
-
-	function verifica() {
-
-		var achou = false;
-
-		for(var posicao = 0; posicao < segredos.length; posicao++) {
-
-			if(input.value == segredos[posicao]) {
-
-				alert("Você ACERTOU!");
-				achou = true;
-				break;
-			}
-		}
-
-		if(achou == false) {
-
-			alert("Você ERROU!");	
-		}
-		
-
-		input.value = "";
-		input.focus();		
-	}
-
-	var button = document.querySelector("button");
-
-	button.onclick = verifica;
-
-
-</script>
